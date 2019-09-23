@@ -1,0 +1,28 @@
+#!/bin/bash
+changed=$(git diff --cached --name-status | grep -v '^D' |grep .md | awk '{print $2}')
+for f in $changed
+do
+	./splitter.awk $f
+	for fcheck in *.content
+	do
+		[ "$fcheck" == "*.content" ] && exit	
+		if [ "$1" == check ]
+		then
+			aspell --home-dir=. --personal=dictionary.txt -H -x check $fcheck
+		else
+			misspelled=$(cat $fcheck | aspell --home-dir=. --personal=dictionary.txt -H list)
+			for word in $misspelled
+			do
+				has_misspelled=1
+				cat $fcheck | sed "s/$word/>>$word<</g" | grep --color $word
+			done
+		fi
+	done
+	./joiner.sh $f
+done
+if [ -n "$has_misspelled" ]
+then
+	echo "====================================="
+	echo "Commit aborted due to spelling mistakes. To force commit execute git commit --no-verify"
+	exit 1
+fi

@@ -1,0 +1,37 @@
+#
+#   Navigation to the left › side: left
+#
+- title: Blog
+  url: "/blog/"
+  side: left
+  dropdown:
+  - title: "Posts"
+    url: "/blog/"    
+  - title: "Talks"
+    url: "/blog/talks/"
+  - title: "Blog Archive"
+    url: "/blog/archive/"
+
+#
+#   Navigation to the right › side: right
+#
+- title: "About me"
+  url: "/info/"
+  side: right
+
+- title: "Search"
+  url: "/search/"
+  side: right
+
+- title: "Contact"
+  url: "/subscribe/"
+  side: right
+  dropdown:
+  - title: "Email"
+    url: "/subscribe/"
+  - title: "Twitter"
+    url: https://twitter.com/devopsspiral
+  - title: "Github"
+    url: https://github.com/devopsspiral
+  - title: "YouTube"
+    url: https://www.youtube.com/channel/UCcnh5fh8isCB0s0Jpz0T3WA
