@@ -16,7 +16,7 @@ widget1:
   text: ''
 widget2:
   title: "YouTube channel"
-  url: 'https://devopsspiral.com/videos/'
+  url: 'https://www.youtube.com/channel/UCcnh5fh8isCB0s0Jpz0T3WA'
   image: 'https://devopsspiral.com/images/videos.jpg'
   text: ''
 

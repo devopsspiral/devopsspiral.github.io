@@ -12,7 +12,7 @@ categories:
 tags:
   - Kyma
   - Service catalog
-iframe: "<iframe width='970' height='546' src='//www.youtube.com/embed/WoHxoz_0ykI' frameborder='0' allowfullscreen></iframe>"
+iframe: "<iframe width='970' height='546' src='//www.youtube.com/embed/uKvqwj_3bMA' frameborder='0' allowfullscreen></iframe>"
 image:
   thumb: "kyma_cluster_installation.png"
   header: "kyma_cluster_installation.png"
