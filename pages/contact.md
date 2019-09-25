@@ -11,8 +11,4 @@ header:
   title: DevOps Spiral
 ---
 
-- [Twitter][1]
-
-
- [1]: http://twitter.com/m_wcislo
  

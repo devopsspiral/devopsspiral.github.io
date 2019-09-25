@@ -14,10 +14,10 @@ Twitter: {{ author.twitter }}{% endif %}
 
 /* THANKS */
 
-Name: Moritz »mo.« Sauer
-Role: Creator of the Theme
-Site: http://mo.phlow.de/
-Twitter: @phlow
+Name: Michał Wcisło
+Role: Author
+Site: http://devopsspiral.com/
+Twitter: @m_wcislo
 Theme: http://phlow.github.io/feeling-responsive/
 
 
