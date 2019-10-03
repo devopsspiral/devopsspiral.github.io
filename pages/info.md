@@ -10,6 +10,7 @@ header:
   title: DevOps Spiral
 ---
 ![Me](/images/me.jpg)
+{% include _social.html %}
 
 ## Hi!
 
