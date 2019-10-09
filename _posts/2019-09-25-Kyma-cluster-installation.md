@@ -18,7 +18,7 @@ image:
   thumb: "kyma_cluster_installation.png"
   header: "kyma_cluster_installation.png"
 video:
-    embedURL: ""
+    embedURL: "https://www.youtube.com/embed/uKvqwj_3bMA"
     contentURL: ""
-    thumbnailUrl: ""
+    thumbnailUrl: "https://devopsspiral.com/images/kyma_cluster_installation.png"
 ---

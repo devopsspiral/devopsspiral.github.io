@@ -18,7 +18,7 @@ image:
   thumb: "first_steps_in_kyma_service_catalog.png"
   header: "first_steps_in_kyma_service_catalog.png"
 video:
-    embedURL: ""
+    embedURL: "https://www.youtube.com/embed/G-GRSxF4_FU"
     contentURL: ""
-    thumbnailUrl: ""
+    thumbnailUrl: "https://devopsspiral.com/images/first_steps_in_kyma_service_catalog.png"
 ---
