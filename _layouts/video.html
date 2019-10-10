@@ -16,6 +16,10 @@ format: video
 						<h1 itemprop="name">{{ page.title }}</h1>
 					</header>
 
+					{% if page.video.name %}<meta itemprop="name" content="{{ page.video.name }}" />{% endif %}
+					{% if page.video.description %}<meta itemprop="description" content="{{ page.video.description }}" />{% endif %}
+					{% if page.video.duration %}<meta itemprop="duration" content="{{ page.video.duration }}" />{% endif %}
+					{% if page.video.uploadDate %}<meta itemprop="uploadDate" content="{{ page.video.uploadDate }}" />{% endif %}
 					{% if page.video.thumbnailUrl %}<meta itemprop="thumbnailUrl" content="{{ page.video.thumbnailUrl }}" />{% endif %}
 					{% if page.video.contentURL %}<meta itemprop="contentURL" content="{{ page.video.contentURL }}" />{% endif %}
 					{% if page.video.embedURL %}<meta itemprop="embedURL" content="{{ page.video.embedURL }}" />{% endif %}

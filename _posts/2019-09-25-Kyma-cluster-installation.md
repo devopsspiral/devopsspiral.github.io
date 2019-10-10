@@ -18,7 +18,10 @@ image:
   thumb: "kyma_cluster_installation.png"
   header: "kyma_cluster_installation.png"
 video:
+    name: "Kyma cluster installation walk-through"
+    description: "Video that walks through Kyma installation on non-managed kubernetes cluster. Poviding some basic hints on installation configuration, process and troubleshooting"
+    duration: "T00H17M8S"
+    uploadDate: "2019-09-25"
     embedURL: "https://www.youtube.com/embed/uKvqwj_3bMA"
-    contentURL: ""
     thumbnailUrl: "https://devopsspiral.com/images/kyma_cluster_installation.png"
 ---
