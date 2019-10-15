@@ -25,7 +25,7 @@ image:
   title: "quick-basic-tooling-setup-k8s.jpg"
   caption: 'Image by <a href="https://pixabay.com/users/Free-Photos-242387/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1209764">Free-Photos</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1209764">Pixabay</a>'
 ---
-I tried to gather some of the easy to apply tips connected with kubernetes tooling. Nothing too complicated, so that you wouldn't need to spend much time on understanding how to use it or how it actually works. The idea is to provide no-brainer tricks that can be used right away. For more advanced tools you will probably find your own favourites soon.
+I tried to gather some of the easy to apply tips connected with kubernetes tooling. Nothing too complicated, so that you wouldn't need to spend much time on understanding how to use it or how it actually works. The idea is to provide no-brainer tricks that can be used right away. For more advanced tools you will probably find your own favorites soon.
 
 <div class="panel radius" markdown="1">
 **Table of Contents**
@@ -47,7 +47,7 @@ alias kg="kubectl get --recursive -f"
 alias kpw="kubectl get pods -w"
 {% endhighlight %}
 
-First one is self-explanatory, next 3 are CRUD type operations on file but it also works on directories. If it is something small I want to deploy I go with file, if it is more complicated I put all the YAMLs in directory, which also force me to keep things organized. Last one is just a check on pod status to see how deplyment is going just after I applied it on cluster. Note the *\-\-recursive* flag which will go down pointed directories to apply/delete/get everything.
+First one is self-explanatory, next 3 are CRUD type operations on file but it also works on directories. If it is something small I want to deploy I go with file, if it is more complicated I put all the YAMLs in directory, which also force me to keep things organized. Last one is just a check on pod status to see how deployment is going just after I applied it on cluster. Note the *\-\-recursive* flag which will go down pointed directories to apply/delete/get everything.
 
 If you deploy things this way, you can then very easily review what was created with *kg*:
 
@@ -119,7 +119,7 @@ As you might noticed I used *sed* to allow completion for our *k* alias that was
 
 ## kubectl explain
 
-You would probably use some templates for creating k8s resources which I will try to cover in [Templating with helm](#templating-with-helm), but not that rare you also need to edit or add some parameters to your YAMLs by hand. You can get some assistance with *kubectl explain* command, which shows kubernetes API paramters in manual-style manner. You can find some of the examples below.
+You would probably use some templates for creating k8s resources which I will try to cover in [Templating with helm](#templating-with-helm), but not that rare you also need to edit or add some parameters to your YAMLs by hand. You can get some assistance with *kubectl explain* command, which shows kubernetes API parameters in manual-style manner. You can find some of the examples below.
 
 {% highlight bash %}
 k explain deployment.spec.template | less
@@ -135,7 +135,7 @@ k explain deployment.spec.template --api-version='extensions/v1beta1' | less
 
 {% endhighlight %}
 
-Tree structure turns out to be very handy especially when fields like *metadata* occures on many levels and it is easy to place it wrongly. Complete list of supported resources will provide shortnames and API group for each resource, so that you can start digging the parameters in kubernetes documentation, project issues or release updates.
+Tree structure turns out to be very handy especially when fields like *metadata* occurs on many levels and it is easy to place it wrongly. Complete list of supported resources will provide short names and API group for each resource, so that you can start digging the parameters in kubernetes documentation, project issues or release updates.
 
 <small markdown="1">[Back to table of contents](#toc)</small>
 
@@ -143,9 +143,9 @@ Tree structure turns out to be very handy especially when fields like *metadata*
 
 Sooner or later you will face situation where number of kubeconfigs, namespaces and context in general will grow. To make things easier you need to find a way for switching between them efficiently. Very often kubectx and kubens seems to be good option, those are basically bash scripts that allows listing and selecting kubeconfig context and namespace respectively. The problem with those tools is that they are applying changes to kubeconfig files directly. While changing namespace seems to be pretty safe knowing that in most cases namespace represents context of some particular application or workspace, so performing some action on one namespace will probably have no sense on other. With context, things become a bit more tricky, you would often have similar applications in same parts of different clusters. Now, taking into consideration that you can use same kubeconfig in different scripts or even terminals I would prefer to do it differently.
 
-To allow using cluster context per runtime, it would be the best to utilize *KUBECONFIG* env variable that is already used by almost all kubernetes tools and libraries. This way it can be set per terminal and it should not interfere with other processes. This approach forces to use kubeconfig per context or even namespace. Having kubconfig per each context-namespace variation would be painfull, so I think reasonable compromise is to have kubeconfig per context and change namespaces with kubens. To avoid your scripts being switched into other namespace you can always create specific kubeconfig for this particular automation case and use it only within one script.
+To allow using cluster context per runtime, it would be the best to utilize *KUBECONFIG* env variable that is already used by almost all kubernetes tools and libraries. This way it can be set per terminal and it should not interfere with other processes. This approach forces to use kubeconfig per context or even namespace. Having kubeconfig per each context-namespace variation would be painful, so I think reasonable compromise is to have kubeconfig per context and change namespaces with kubens. To avoid your scripts being switched into other namespace you can always create specific kubeconfig for this particular automation case and use it only within one script.
 
-Even when limiting number of kubeconfig files available, writing their names and exporting *KUBECONFIG* is not very convenient. That is why you can use following entry in *~/.bashrc* file to wrap it in handy *kl* function, "l" goes for load. First of all it will set *KUBECONFIG* env variable for you, assuming that you keep your kubeconfigs in *~/.kube/* directory. Secondly, it has builtin completion for names there, so selecting correct config is just a metter of consistent naming and few *[TAB]* hits. Lastly it will set kubernetes style prompt (kube_ps1) so that you know that you are ready to work with particular cluster/context and namespace. You don't like to have it always on due to other custom prompts you might be using like *git* for example.
+Even when limiting number of kubeconfig files available, writing their names and exporting *KUBECONFIG* is not very convenient. That is why you can use following entry in *~/.bashrc* file to wrap it in handy *kl* function, "l" goes for load. First of all it will set *KUBECONFIG* env variable for you, assuming that you keep your kubeconfigs in *~/.kube/* directory. Secondly, it has builtin completion for names there, so selecting correct config is just a matter of consistent naming and few *[TAB]* hits. Lastly it will set kubernetes style prompt (kube_ps1) so that you know that you are ready to work with particular cluster/context and namespace. You don't like to have it always on due to other custom prompts you might be using like *git* for example.
 
 {% highlight bash %}
 #~/.bashrc
@@ -181,7 +181,7 @@ complete -F _kl_completions kl
 
 Going though the code snippet, first function (*cluster_name*) is supposed to generate cluster context name, so that it can be viewed in prompt. Thanks to kube-ps1 we can define how first part of the prompt will be generated using *KUBE_PS1_CLUSTER_FUNCTION*. Then *kl* function is executing the main part by setting *KUBECONFIG* env variable and configuring kube-ps1. Just remember to copy kube-ps1.sh script from [kube-ps1](https://github.com/jonmosco/kube-ps1) to *~/.kube-ps1.sh*. Last part (*_kl_completions*) provide bash completion for the kubeconfig files, so they can be quickly selected.
 
-As I mentioned already, for switching between namespaces you can use kubens that can be donwloaded from [kubens raw](https://raw.githubusercontent.com/ahmetb/kubectx/master/kubens). To follow naming convention, you can save it as /usr/local/bin/kns.
+As I mentioned already, for switching between namespaces you can use kubens that can be downloaded from [kubens raw](https://raw.githubusercontent.com/ahmetb/kubectx/master/kubens). To follow naming convention, you can save it as /usr/local/bin/kns.
 
 <small markdown="1">[Back to table of contents](#toc)</small>
 
@@ -302,7 +302,7 @@ spec:
 {% endraw %}
 {% endhighlight %}
 
-To make templating easy to use, I also defined another function in my *.bashrc* file. Output from templating is saved in */tmp/* directory not to clutter my filesystem. As first step we need to create directory there. Then, actual templating is done, assuming my helm template/chart is in *~/tmplt* directory and I keep my values files in *~/temp*. Notice the *\-\-notes* flag, it tells helm to also template *NOTES.txt* file, which can be used to persist some of the parameters created during templating (e.g. passwords).
+To make templating easy to use, I also defined another function in my *.bashrc* file. Output from templating is saved in */tmp/* directory not to clutter my file system. As first step we need to create directory there. Then, actual templating is done, assuming my helm template/chart is in *~/tmplt* directory and I keep my values files in *~/temp*. Notice the *\-\-notes* flag, it tells helm to also template *NOTES.txt* file, which can be used to persist some of the parameters created during templating (e.g. passwords).
 
 {% highlight bash %}
 kt()
@@ -339,12 +339,12 @@ ingress.extensions/echo-tmplt created
 service/echo-tmplt created
 {% endhighlight %}
 
-In this scenario I just deployed application and I could easily do it using helm, but such templating can work also for partial deployments like mentioned ingress, config maps or secrets. And big adventage of it is to keep key parameters in few lines in config file, so they can be easily reviewed. On the other hand, generated files can be easily twicked and reapplied for debugging purposes.
+In this scenario I just deployed application and I could easily do it using helm, but such templating can work also for partial deployments like mentioned ingress, config maps or secrets. And big advantaged of it is to keep key parameters in few lines in config file, so they can be easily reviewed. On the other hand, generated files can be easily tweaked and reapplied for debugging purposes.
 
 <small markdown="1">[Back to table of contents](#toc)</small>
 
 ## stern
-To effectively tail logs from multiple pods I'm using stern. Check out [stern releases](https://github.com/wercker/stern/releases) to get the binary for your system. Stern is doing couple of useful things, like timestamping, colouring pod instance and it supports regex too. In most cases seeing logs from deployed containers would boil down to
+To effectively tail logs from multiple pods I'm using stern. Check out [stern releases](https://github.com/wercker/stern/releases) to get the binary for your system. Stern is doing couple of useful things, like timestamping, coloring pod instance and it supports regex too. In most cases seeing logs from deployed containers would boil down to
 {% highlight bash %}
 #$ stern <name_of_container>*
 {% endhighlight %}
