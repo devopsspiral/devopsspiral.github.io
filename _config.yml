@@ -21,7 +21,7 @@ description: "Spiral journey over kubernetes, cloud and devops world."
 # Main author of the website
 # See > authors.yml
 author: m-wcislo
-
+twitter_username: devopsspiral
 # This URL is the main address for absolute links. Don't include a slash at the end.
 #
 url: 'https://devopsspiral.com'

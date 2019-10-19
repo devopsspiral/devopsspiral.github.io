@@ -2,6 +2,28 @@
 layout: default
 format: post
 ---
+
+<!-- Twitter cards -->
+<meta name="twitter:site"    content="@{{ site.twitter_username }}">
+<meta name="twitter:creator" content="@{{ page.author }}">
+<meta name="twitter:title"   content="{{ page.title }}">
+
+{% if page.teaser %}
+<meta name="twitter:description" content="{{ page.teaser }}">
+{% else %}
+<meta name="twitter:description" content="{{ site.description }}">
+{% endif %}
+
+{% if page.image %}
+<meta name="twitter:card"  content="summary_large_image">
+<meta name="twitter:image" content="{{ site.urlimg }}{{ page.image.title }}">
+{% else %}
+<meta name="twitter:card"  content="summary">
+<meta name="twitter:image" content="{{ site.title_image }}">
+{% endif %}
+<!-- end of Twitter cards -->
+
+
 <div class="row t30">
 	<div class="medium-8 columns{% if page.sidebar == NULL %} medium-offset-2 end{% endif %}{% if page.sidebar == "left" %} medium-push-4{% endif %}">
 		<article itemscope itemtype="http://schema.org/Article">
