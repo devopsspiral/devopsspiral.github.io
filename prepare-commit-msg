@@ -1,0 +1,12 @@
+#!/bin/sh
+
+COMMIT_MSG_FILE=$1
+COMMIT_SOURCE=$2
+SHA1=$3
+
+changed=$(git diff --cached --name-status | awk '{print $2}' | grep '.md')
+if [ -n "$changed" ]
+then
+	filename=$(basename ${changed%% *})
+	sed -i "1i$filename" "$COMMIT_MSG_FILE"
+fi

@@ -44,3 +44,8 @@ apple-touch-icon-72x72-precomposed:     "apple-touch-icon-72x72-precomposed.png"
 apple-touch-icon-precomposed:           "apple-touch-icon-precomposed.png"
 msapplication_tileimage:                "msapplication_tileimage.png"               # Size 144x144
 msapplication_tilecolor:                "#fabb00"
+
+markdown: kramdown
+kramdown:
+  syntax_highlighter: pygments
+highlighter: pygments

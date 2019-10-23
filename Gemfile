@@ -5,3 +5,4 @@ gem 'jekyll-paginate'
 gem "jekyll-asciidoc", "~> 3.0"
 
 gem "jekyll-gist", "~> 1.5"
+gem "pygments.rb"
