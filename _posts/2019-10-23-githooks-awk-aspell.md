@@ -53,36 +53,36 @@ Git hooks are divided into two groups: server-side and client-side, as you can i
 
 Git hooks directory (*.git/hooks/*) has already *.sample* hooks that you can start from when creating your own scripts. You just need to remember to remove *.sample* part of the name and make the script executable. In this particular case I will use only *pre-commit* and *prepare-commit-msg* hooks to achieve what I planned. Let's start with spell checking task.
 
-{% highlight bash linenos %}
-# pre-commit
-#!/bin/sh
-changed=$(git diff --cached --name-status | grep -v '^D' |grep .md | awk '{print $2}')
-for f in $changed
-do
-  ./splitter.awk $f
-  for fcheck in *.content
-  do
-    [ "$fcheck" == "*.content" ] && exit
-    if [ "$1" == check ]
-    then
-      aspell --home-dir=. --personal=dictionary.txt -H -x check $fcheck
-    else
-      misspelled=$(cat $fcheck | aspell --home-dir=. --personal=dictionary.txt -H list)
-      for word in $misspelled
-      do
-        has_misspelled=1
-        cat $fcheck | sed "s/$word/>>$word<</g" | grep --color $word
-      done
-    fi
-  done
-  ./joiner.sh $f
-done
-if [ -n "$has_misspelled" ]
-then
-  echo "====================================="
-  echo "Commit aborted due to spelling mistakes. To force commit execute git commit --no-verify"
-  exit 1
-fi
+{% highlight bash %}
+1 # pre-commit
+2 #!/bin/sh
+3 changed=$(git diff --cached --name-status | grep -v '^D' |grep .md | awk '{print $2}')
+4 for f in $changed
+5 do
+6   ./splitter.awk $f
+7   for fcheck in *.content
+8   do
+9     [ "$fcheck" == "*.content" ] && exit
+10     if [ "$1" == check ]
+11     then
+12       aspell --home-dir=. --personal=dictionary.txt -H -x check $fcheck
+13     else
+14       misspelled=$(cat $fcheck | aspell --home-dir=. --personal=dictionary.txt -H list)
+15       for word in $misspelled
+16       do
+17        has_misspelled=1
+18         cat $fcheck | sed "s/$word/>>$word<</g" | grep --color $word
+19       done
+20     fi
+21   done
+22   ./joiner.sh $f
+23 done
+24 if [ -n "$has_misspelled" ]
+25 then
+26   echo "====================================="
+27   echo "Commit aborted due to spelling mistakes. To force commit execute git commit --no-verify"
+28   exit 1
+29 fi
 {% endhighlight %}
 
 [Source from Github](https://github.com/devopsspiral/devopsspiral.github.io/blob/master/pre-commit)
@@ -136,37 +136,37 @@ Not sure how often you are using awk, but for a long time it was a tool used onl
 
 I will not go into too many details of awk as it wouldn't fit single section, but *splitter.awk* is good example of some basic features that can be used in day-to-day work.
 
-{% highlight bash linenos %}
-# splitter.awk
-#! /usr/bin/awk -f
-BEGIN {
-	header = 1
-	yaml_parts = 0;
-	part_count = 0
-	code = 0
-}
-{
-if( $0 == "---")
-	yaml_parts++;
-else if( $0 ~ / highlight/)
-	code = 1;
-if( header )
-	filename = "md000.header";
-else if( code )
-	filename = sprintf("md%.2d.hcode", part_count);
-else
-	filename = sprintf("md%.2d.content", part_count);
-print >filename
-if( yaml_parts == 2 )
-	header = 0;
-if ( $0 ~ / endhighlight/)
-{
-        code = 0;
-        part_count++;
-}
-}
-END {
-}
+{% highlight bash %}
+1 # splitter.awk
+2 #! /usr/bin/awk -f
+3 BEGIN {
+4 	header = 1
+5 	yaml_parts = 0;
+6 	part_count = 0
+7 	code = 0
+8 }
+9 {
+10 if( $0 == "---")
+11 	yaml_parts++;
+12 else if( $0 ~ / highlight/)
+13 	code = 1;
+14 if( header )
+15	filename = "md000.header";
+16 else if( code )
+17 	filename = sprintf("md%.2d.hcode", part_count);
+18 else
+19 	filename = sprintf("md%.2d.content", part_count);
+20 print >filename
+21 if( yaml_parts == 2 )
+22 	header = 0;
+23 if ( $0 ~ / endhighlight/)
+24 {
+25         code = 0;
+26         part_count++;
+27 }
+28 }
+29 END {
+30 }
 {% endhighlight %}
 
 [Source from Github](https://github.com/devopsspiral/devopsspiral.github.io/blob/master/splitter.awk)
