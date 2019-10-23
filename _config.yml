@@ -54,8 +54,10 @@ paginate_path: "blog/page:num"
 
 # Theme works best with Kramdown (using the table of contents function)
 markdown: kramdown
+kramdown:
+  syntax_highlighter: pygments
+highlighter: pygments
 permalink: /:categories/:title/
-highlight: rouge
 plugins: [jekyll-paginate]
 excerpt_separator: "<!--more-->"
 include: ['.htaccess']
