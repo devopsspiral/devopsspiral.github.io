@@ -46,6 +46,4 @@ msapplication_tileimage:                "msapplication_tileimage.png"           
 msapplication_tilecolor:                "#fabb00"
 
 markdown: kramdown
-kramdown:
-  syntax_highlighter: pygments
-highlighter: pygments
+highlight: rouge
