@@ -8,7 +8,7 @@ title: "Githooks, awk and aspell - stirred, not shaken."
 teaser: "In this article I'm explaining automation created by me that allows spell checking for articles in my jekyll site. I thought it is perfect occasion to give some introduction to githooks, awk and aspell."
 header:
   background-color: "#4472c4"
-  image: logo.png
+  image: logo_colors.svg
   title: DevOps Spiral
 categories:
   - articles
@@ -119,7 +119,8 @@ SHA1=$3
 changed=$(git diff --cached --name-status | awk '{print $2}' | grep '.md')
 if [ -n "$changed" ]
 then
-  filename=$(basename ${changed%% *})
+  array=( $changed )
+  filename=$(basename ${array[0]})
   sed -i "1i$filename" "$COMMIT_MSG_FILE"
 fi
 {% endhighlight %}

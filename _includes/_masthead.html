@@ -5,7 +5,7 @@
 	<div class="row">
 		<div class="small-12 columns">
 			<a id="logo" href="{{ site.url }}" title="{{ site.title }} – {{ site.slogan }}">
-				<img src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ site.logo }}" alt="{{ site.title }} – {{ site.slogan }}">
+				<img src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ site.logo }}" alt="{{ site.title }} – {{ site.slogan }} " style="width: 10%;">
 			</a>
 		</div><!-- /.small-12.columns -->
 	</div><!-- /.row -->
@@ -25,8 +25,9 @@
 <div id="masthead-with-text" style="height: 200px;{% if page.header.background-color %}background: {{ page.header.background-color }};{% endif %} {% if page.header.image_fullwidth %}{% elsif page.header.pattern %}background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('{{ site.urlimg }}/{{ page.header.pattern }}'){% endif %}">
 	<div class="row">
 		<div style="margin:0 auto;display: inline-block; ">
-				<div  style="float: left;">
-					<img src="{{ site.urlimg }}/{{ page.header.image }}" alt="{{ site.title }}">
+				
+				<div  style="float: left;width: 10%;">
+					<img src="{{ site.urlimg }}/{{ page.header.image }}" alt="{{ site.title }}" >
 				</div>
 				<div class="masthead-title" style="float: left;line-height: 120px;">{{ page.header.title }}</div>
 			</div>

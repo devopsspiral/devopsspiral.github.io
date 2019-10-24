@@ -41,7 +41,7 @@ urlimg: 'https://devopsspiral.com/images/'
 
 
 # Logo size is 600x80 pixels
-logo: "logo.png"
+logo: "logo_colors.svg"
 
 
 # Paginates all X entries

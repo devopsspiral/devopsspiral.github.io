@@ -8,7 +8,7 @@ title: "Quick hints on starting with k8s effectively"
 teaser: "Basic hints on k8s tooling that should help you when starting journey with kubernetes. Easy to understand and ready to be applied right away to boost basic activities on your cluster."
 header:
   background-color: "#4472c4"
-  image: logo.png
+  image: logo_colors.svg
   title: DevOps Spiral
 categories:
   - articles

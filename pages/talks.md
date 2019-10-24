@@ -6,7 +6,7 @@ teaser: ""
 permalink: /blog/talks/
 header:
   background-color: "#4472c4"
-  image: logo.png
+  image: logo_colors.svg
   title: DevOps Spiral
 ---
 ## Cloud Lego with Kyma - 19.09.2019 Nokia Garage Talks - tech attitudes

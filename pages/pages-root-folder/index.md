@@ -6,7 +6,7 @@
 #
 layout: frontpage
 header:
-  image: logo.png
+  image: logo_colors.svg
   background-color: "#4472c4"
   title: DevOps Spiral
 widget1:

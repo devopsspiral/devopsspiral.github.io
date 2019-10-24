@@ -5,11 +5,6 @@
   class: "network-entypo"
   title: "Icons by Daniel Bruce"
 
-- name: 'Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>'
-  url: "https://www.flaticon.com/"
-  class: "network-entypo"
-  title: "www.flaticon.com"
-
 - name: "Built on Foundation"
   url: "https://foundation.zurb.com/"
   class: "services-newsletter"

@@ -6,7 +6,7 @@ teaser: ""
 permalink: /contact/
 header:
   background-color: "#4472c4"
-  image: logo.png
+  image: logo_colors.svg
   title: DevOps Spiral
 ---
 
