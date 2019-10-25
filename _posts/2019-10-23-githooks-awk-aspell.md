@@ -18,10 +18,10 @@ tags:
   - awk
   - githooks
 image:
-  homepage: "githooks-awk-aspell.png"
-  thumb: "githooks-awk-aspell.png"
-  header: "githooks-awk-aspell.png"
-  title: "githooks-awk-aspell.png"
+  homepage: "githooks-awk-aspell.jpg"
+  thumb: "githooks-awk-aspell.jpg"
+  header: "githooks-awk-aspell.jpg"
+  title: "githooks-awk-aspell.jpg"
   caption: 'Based on Photo by <a href="https://www.pexels.com/@enginakyurt?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Engin Akyurt</a> from <a href="https://www.pexels.com/photo/close-up-photo-of-martini-in-cocktail-glass-2531195/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Pexels</a>'
 ---
 My site is hosted on GitHub pages, which I think is very good option to start your website. You get hosting, valid Let's Encrypt certificate, you can point your custom domain to it and your page is version controlled. It has also built-in support for jekyll, which can be used for templating your static files. It is also good idea to use ready-made theme that will cover all the inevitable configuration behind the scene (I'm using [feeling-responsive](https://phlow.github.io/feeling-responsive/)). You can still add some custom tweaks if you want. The end goal is just to focus on writing .md's with your content. Part of writing is also making sure that you are not making spelling mistakes, which happens not that rare for non-native speaker. I wanted to make spelling check kind of gateway to publishing my content and I thought using git hooks for that sounds like a good idea.
