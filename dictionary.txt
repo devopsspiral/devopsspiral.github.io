@@ -1,19 +1,24 @@
-personal_ws-1.1 en 63 
+personal_ws-1.1 en 78 
+sbin
 boilerplates
 aspell
 DevOps
 http
 serviceName
 templated
+CNCF
+ubuntu
 msg
 namespace
 bashrc
 UI
+Harhor
 config
 jpg
 TCP
-incrementing
 github
+incrementing
+nonprivileged
 LateX
 kubeconfig
 awk
@@ -25,9 +30,11 @@ kubectl
 selfLink
 dir
 backuping
+golang
 creationTimestamp
 md's
 teardown
+https
 zsh
 clusterDN
 apis
@@ -41,6 +48,9 @@ backend
 uid
 png
 toc
+clair
+sudo
+retag
 md
 servicePort
 yaml
@@ -55,10 +65,15 @@ pc
 linux
 api
 repo
+Portieris
+conf
 yml
 env
 resourceVersion
 kubernetes
+dockerfile
 templating
 linters
 endhighlight
+gid
+kubelet
