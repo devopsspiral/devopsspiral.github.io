@@ -11,11 +11,9 @@ categories:
   - kubernetes
 tags:
   - kubernetes
-  - container network
-  - network policies
-  - flannel
-  - calico
-iframe: "<iframe width='970' height='546' src='//www.youtube.com/embed/hhtdhW5zmgw' frameborder='0' allowfullscreen></iframe>"
+  - services
+  - iptables
+iframe: "<iframe width='970' height='546' src='//www.youtube.com/embed/m6gCcLhOwkA ' frameborder='0' allowfullscreen></iframe>"
 image:
   homepage: "k8s_services.jpg"
   thumb: "k8s_services.jpg"
@@ -24,8 +22,8 @@ image:
 video:
     name: "Kubernetes services​"
     description: "In this video I'm talking about Kubernetes services - types, usage and implementation on iptables."
-    duration: "T00H16M51S"
-    uploadDate: "2019-11-27"
-    embedURL: "https://www.youtube.com/embed/hhtdhW5zmgw"
+    duration: "T00H15M34S"
+    uploadDate: "2019-11-28"
+    embedURL: "https://www.youtube.com/embed/m6gCcLhOwkA "
     thumbnailUrl: "https://devopsspiral.com/images/k8s_services.jpg"
 ---
