@@ -170,7 +170,7 @@ k3d create --workers 1
 cp "$(k3d get-kubeconfig --name='k3s-default')" ~/.kube/config
 {% endhighlight %}
 
-{% include alert text='I noticed `k3d get-kubeconfig --name=k3s-default` might need some time to succeed. So you might need to retry it in case of errors.' %}
+{% include alert text='I noticed `k3d get-kubeconfig --name=k3s-default` might need some time to succeed. Just retry it in case of errors.' %}
 
 To make k3s see our local registry we need some additional steps described in [k3d docs](https://github.com/rancher/k3d/blob/master/docs/examples.md#connect-with-a-local-insecure-registry). You can first delete the cluster if you already started one with `k3d delete`. We can skip the first step of instructions because we already have registry in place. In step 2 we need to create registries.yaml and place it in `/home/${USER}/.k3d`, the content is as follows.
 
