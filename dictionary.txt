@@ -1,18 +1,23 @@
-personal_ws-1.1 en 117 
+personal_ws-1.1 en 127 
 Akihiro
 BuildKit
 CLI
 CNCF
+Caddy
 ClusterIP
+Cron
+CronJob
 DevOps
 Grafana
 Harhor
+JSON
 KubeLibrary
 LateX
 MicroPaaS
 Pixabay
 Portieris
 PyPI
+RESTful
 RKE
 Skaffold
 Suda
@@ -20,6 +25,7 @@ TCP
 Traefik
 UI
 YAMLs
+ZipFetcher
 api
 apiVersion
 apis
@@ -33,11 +39,13 @@ boilerplates
 buildctl
 buildkitd
 buildx
+caddyfile
 chmod
 clair
 clusterDN
 conf
 config
+configMap
 containerPort
 containerd
 creationTimestamp
@@ -94,10 +102,12 @@ rebase
 repo
 resourceVersion
 retag
+rf
 robotframework
 runtime
 sbin
 selfLink
+serviceAccount
 serviceName
 servicePort
 skaffold
