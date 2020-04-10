@@ -36,7 +36,7 @@ As mentioned in my previous article about [Robot Framework library for testing K
 
 ## The goal
 
-What I wanted to achieve is stateless service that can execute set of tests provided somehow and publish results somewhere. Somehow and somewhere can be anything that implements defined abstract classes. By the way, you can find rf-service code on [github](https://github.com/devopsspiral/rf-service). I thought the most useful small step I can take is to have tests being taken from http server as zip - same as branches are available in github for example, and test results published in local http server for which I've chosen Caddy. You could use any other tool for this job, but I just wanted to try some new stuff, especially that I heard some good things about Caddy.
+What I wanted to achieve is stateless service that can execute set of tests provided somehow and publish results somewhere. Somehow and somewhere can be anything that implements defined abstract classes. By the way, you can find rf-service code on [github](https://github.com/devopsspiral/rf-service/tree/v0.1.0). I thought the most useful small step I can take is to have tests being taken from http server as zip - same as branches are available in github for example, and test results published in local http server for which I've chosen Caddy. You could use any other tool for this job, but I just wanted to try some new stuff, especially that I heard some good things about Caddy.
 
 As for rf-service itself, thanks to Robot Framework API you can pretty easily load tests and generate results pragmatically. So each (Cron)Job execution starts with downloading test suites into temporary context dir, then tests are executed and published on Caddy server. There is nothing left on rf-service after execution, the only outcome is HTML report accessible via Caddy that simply lists all the reports.
 
@@ -87,12 +87,12 @@ Which instructs Caddy to expose itself on port 8080, disable https, configure lo
 
 ## rf-service chart
 
-Helm chart for rf-service is not very complicated, it is starting one container with Caddy with persistent volume and container with rf-service each time tests are executed. rf-service configuration JSON file is kept in configMap so you can change the configuration dynamically between test execution. You can find more detailed description of parameters in [README](https://github.com/devopsspiral/rf-service#helm-chart).
+Helm chart for rf-service is not very complicated, it is starting one container with Caddy with persistent volume and container with rf-service each time tests are executed. rf-service configuration JSON file is kept in configMap so you can change the configuration dynamically between test execution. You can find more detailed description of parameters in [README](https://github.com/devopsspiral/rf-service/tree/v0.1.0#helm-chart).
 
 Very basic helm install should already bring the whole setup to your cluster. By default Caddy service is exposed as type LoadBalancer. Also keep in mind that rf-service will be using serviceAccount bound to cluster-admin role, you should create your own role to reflect only limited permissions needed for your tests.
 
 {% highlight bash %}
-git clone https://github.com/devopsspiral/rf-service.git
+git clone -b v0.1.0 https://github.com/devopsspiral/rf-service.git
 cd rf-service
 helm install rf-service chart/rf-service/
 {% endhighlight %}

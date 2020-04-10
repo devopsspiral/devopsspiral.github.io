@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 changed=$(git diff --cached --name-status | grep -v '^D' |grep .md | awk '{print $2}')
 for f in $changed
 do
