@@ -1,10 +1,6 @@
 #
 #   Navigation to the left › side: left
 #
-- title: Start
-  url: "/"
-  side: left
-
 - title: Blog
   url: "/blog/"
   side: left

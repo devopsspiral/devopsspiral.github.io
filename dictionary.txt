@@ -1,4 +1,4 @@
-personal_ws-1.1 en 135 
+personal_ws-1.1 en 138 
 runtime
 nginx
 kubeconfig
@@ -12,6 +12,7 @@ Traefik
 golang
 Dockerizing
 moby
+hardcoded
 config
 caddyfile
 mkcert
@@ -27,10 +28,12 @@ awk
 frontend
 clusterDN
 devopsspiral
-KubeLibrary
 kubelibrary
+KubeLibrary
 dir
 loadBalancer
+CRD
+Kyma
 ip
 md's
 yaml
@@ -85,8 +88,8 @@ msg
 linux
 apis
 BuildKit
-executables
 retag
+executables
 frontends
 PyPI
 serviceName
@@ -133,4 +136,4 @@ RESTful
 pre
 aspell
 servicePort
-JSON
+json
