@@ -89,7 +89,7 @@ In a path towards making rf-service generic enough to be executed as a base for 
 
 ## Running tests
 
-Alright let's run some tests then. I will be running testcases from [KubeLibrary/testcases](https://github.com/devopsspiral/KubeLibrary/testcases) and using KubeLibrary as a testing library itself.
+Alright let's run some tests then. I will be running testcases from [KubeLibrary/testcases](https://github.com/devopsspiral/KubeLibrary/tree/v0.1.4/testcases) and using KubeLibrary as a testing library itself.
 
 As a first step you need to install octopus from the chart provided in its [repository](https://github.com/kyma-incubator/octopus).
 
@@ -119,9 +119,9 @@ spec:
           command:
                   - "rf-service"
                   - "--ZipFetcher-url"
-                  - "https://github.com/devopsspiral/KubeLibrary/archive/master.zip"
+                  - "https://github.com/devopsspiral/KubeLibrary/archive/v0.1.4.zip"
                   - "--ZipFetcher-path"
-                  - "KubeLibrary-master/testcases"
+                  - "KubeLibrary-0.1.4/testcases"
                   - "--LocalPublisher-dest"
                   - "somecontext"
                   - "-i"

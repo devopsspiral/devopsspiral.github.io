@@ -55,7 +55,7 @@ rf-service configuration is passed as JSON file - the only argument. This is the
   }
 {% endhighlight %}
 
-First we define fetcher of type ZipFetcher and passing URL with file, which happens to be example tests from [KubeLibrary repo](https://github.com/devopsspiral/KubeLibrary/tree/master/testcases) but made from in-cluster execution (incluster branch). Then tests will be published using CaddyPubliser which is nothing else than PUT request towards Caddy. Notice usage of Caddy kubernetes service name as host.
+First we define fetcher of type ZipFetcher and passing URL with file, which happens to be example tests from [KubeLibrary repo](https://github.com/devopsspiral/KubeLibrary/tree/incluster/testcases) but made from in-cluster execution (incluster branch). Then tests will be published using CaddyPubliser which is nothing else than PUT request towards Caddy. Notice usage of Caddy kubernetes service name as host.
 
 <small markdown="1">[Back to table of contents](#toc)</small>
 

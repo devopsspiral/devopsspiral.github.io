@@ -76,7 +76,8 @@ Code of KubeLibrary can be found on [github](https://github.com/devopsspiral/Kub
 KubeLibrary is published on PyPI as robotframework-kubelibrary. To be able to run tests you need to install KubeLibrary using pip first. It has Robot Framework as dependency so you should be ready for using `robot` binary without extra steps.
 
 {% highlight bash %}
-pip install robotframework-kubelibrary
+# KubeLibrary has newer versions, but to match article content from the past use below version
+pip install robotframework-kubelibrary==0.1.2
 {% endhighlight %}
 
 If you want to run all the tests from */testcases* you also need to install extra dependencies for some of the tests.
