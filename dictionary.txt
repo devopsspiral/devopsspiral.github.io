@@ -1,4 +1,4 @@
-personal_ws-1.1 en 138 
+personal_ws-1.1 en 150 
 runtime
 nginx
 kubeconfig
@@ -6,11 +6,13 @@ templating
 Akihiro
 api
 gradle
+arg
 yml
 RKE
 Traefik
 golang
 Dockerizing
+BPF
 moby
 hardcoded
 config
@@ -20,6 +22,7 @@ kubectl
 backuping
 nonprivileged
 cli
+cmd
 jpg
 TCP
 YAMLs
@@ -58,6 +61,7 @@ uid
 skaffold
 CSS
 dockerfile
+Microservice
 pc
 toc
 clair
@@ -66,13 +70,16 @@ ubuntu
 ok
 ZipFetcher
 https
+xargs
 CNCF
 chmod
 rebase
 sbin
 rf
+kprobe
 ps
 py
+eBPF
 templated
 env
 DevOps
@@ -85,16 +92,18 @@ kubeconfigs
 noobs
 linters
 msg
+dataplane
+GKE
 linux
 apis
 BuildKit
-retag
 executables
+retag
 frontends
 PyPI
 serviceName
-Grafana
 grafana
+filesystem
 MicroPaaS
 boilerplates
 npm
@@ -102,6 +111,7 @@ jekyll
 Suda
 nodejs
 txt
+bpftrace
 endhighlight
 Pixabay
 apiVersion
@@ -113,8 +123,10 @@ buildkitd
 serviceAccount
 LateX
 Harhor
+Istio
 containerd
 vue
+struct
 testcases
 buildctl
 conf
