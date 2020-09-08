@@ -4,7 +4,7 @@ layout: video
 # Content
 #
 
-title: "ChatOps level up with StackStorm."
+title: "ChatOps level up with StackStorm"
 teaser: "In this video I'm showing how to build complete flow with slack, errbot and stackstorm. As an example I'm showing building jenkins jobs from slack."
 categories:
   - video

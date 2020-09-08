@@ -4,7 +4,7 @@ layout: page
 # Content
 #
 
-title: "Testing with octopus."
+title: "Testing with octopus"
 teaser: "In this article I'm describing how I made KubeLibrary, rf-service and octopus work together."
 categories:
   - articles
@@ -48,6 +48,8 @@ Kyma-project Octopus took steps towards making this happen, you can find whole m
 
 Now you only need container with your test suites to execute on demand, which is exactly what rf-service is supposed to provide. Till now it was triggered as CronJob so there was schedule and possible repeatability, implemented changes allows taking advantage of running it within octopus. You can find more info about what was actually added in below section.
 
+<small markdown="1">[Back to table of contents](#toc)</small>
+
 ## Essential changes to rf-service
 
 In this article I'm only focusing on running rf-service as standalone container, but it can be started as REST API based service for running tests on demand. 
@@ -79,13 +81,19 @@ is equivalent with following json configuration file:
 
 allowing pretty flexible configuration of rf-service.
 
+<small markdown="1">[Back to table of contents](#toc)</small>
+
 ### Execution by tag
 
 Tagging tests in Robot Framework is powerful way of handling test execution and in general categorizing testcases. Since rf-service fetches complete test suites, allowing executing only part of them is a must and has been mirrored from Robot Framework CLI. To include tags pass `-i <tag>` to exclude tags use `-e <tag>`. Those values are then passed to Robot Framework so you can expect all the behaviors to be exactly the same.
 
+<small markdown="1">[Back to table of contents](#toc)</small>
+
 ### Dependency resolution
 
 In a path towards making rf-service generic enough to be executed as a base for different kinds of testcases, support for pip requirements was added. This way if fetcher collects directory containing *requirements.txt* file, it will install packages as with `pip install -r requirements.txt`. Just remember first spotted requirements.txt file will be used, so it is best to keep one in top level directory.
+
+<small markdown="1">[Back to table of contents](#toc)</small>
 
 ## Running tests
 
@@ -288,6 +296,10 @@ Status:
 Events:                 <none>
 {% endhighlight %}
 
+<small markdown="1">[Back to table of contents](#toc)</small>
+
 ## Conclusion
 
 In my opinion octopus is very interesting project and might play important role whenever kubernetes is used, by filling testing gap. As someone said YAML became k8s programming language and as every programming language needs some holistic approach to testing. Observing what octopus can and what are the proposals seen in the project [issues](https://github.com/kyma-incubator/octopus/issues) seems it can be good move towards it.
+
+<small markdown="1">[Back to table of contents](#toc)</small>

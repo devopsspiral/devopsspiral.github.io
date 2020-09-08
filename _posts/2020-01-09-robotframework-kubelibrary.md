@@ -153,7 +153,7 @@ All the tests tagged as *grafana* can be used to test this particular deployment
 
 <small markdown="1">[Back to table of contents](#toc)</small>
 
-##  Conclusions
+##  Conclusion
 
 Obviously writing 11 functions talking to Kubernetes API is not enough to perform extensive tests, but it serves as a good starting point. In example testcases I've also showed couple of patterns that can be utilized to extend KubeLibrary. Most additional efforts are matter of figuring out how to get particular Kubernetes API object you need and how to test what is inside of it.
 

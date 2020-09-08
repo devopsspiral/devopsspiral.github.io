@@ -4,7 +4,7 @@ layout: page
 # Content
 #
 
-title: "Intro to Vue.js. Testing on kubernetes - rf-service frontend."
+title: "Intro to Vue.js. Testing on kubernetes - rf-service frontend"
 teaser: "In this article I'm showing my first steps in Vue.js by adding simple frontend to the existing rf-service."
 header:
   background-color: "#4472c4"
@@ -378,7 +378,7 @@ and ingress. Expose over ingress became mandatory to allows easy handling on fro
 
 <small markdown="1">[Back to table of contents](#toc)</small>
 
-## Conclusions
+## Conclusion
 
 The created frontend doesn't have styling and still needs some more work, but building it with Vue.js was real fun. After getting the whole idea of components it was quite easy to add new stuff there. Solutions to most of my initial problems could be found in great Vue.js materials or on forums. Vue.js is really great tool for creating both simple and complex apps and it is definitely a lot of learning ahead of me in this matter.
 

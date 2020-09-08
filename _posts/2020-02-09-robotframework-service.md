@@ -114,7 +114,7 @@ Other than that each test result should be published on Caddy and look similar t
 
 <small markdown="1">[Back to table of contents](#toc)</small>
 
-## Conclusions
+## Conclusion
 
 This short article described how to run Robot Framework tests along with KubeLibrary from within your cluster. The whole configuration is static on one side, but allows some dynamic changes like rf-service configuration through configMap or update of tests in git branch. To make it even more dynamic rf-service should become RESTful, which would allow running tests on demand with different configuration per each execution.
 
