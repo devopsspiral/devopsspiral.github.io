@@ -1,4 +1,4 @@
-personal_ws-1.1 en 150 
+personal_ws-1.1 en 157 
 runtime
 nginx
 kubeconfig
@@ -8,6 +8,7 @@ api
 gradle
 arg
 yml
+PRs
 RKE
 Traefik
 golang
@@ -31,8 +32,8 @@ awk
 frontend
 clusterDN
 devopsspiral
-kubelibrary
 KubeLibrary
+kubelibrary
 dir
 loadBalancer
 CRD
@@ -51,6 +52,7 @@ configMap
 ClusterIP
 namespace
 namespaces
+persistency
 dockerized
 src
 incrementing
@@ -84,13 +86,16 @@ templated
 env
 DevOps
 CronJob
+repos
 UI
 gid
 kubernetes
 Caddy
 kubeconfigs
 noobs
+vm
 linters
+wget
 msg
 dataplane
 GKE
@@ -103,10 +108,12 @@ frontends
 PyPI
 serviceName
 grafana
+hostname
 filesystem
 MicroPaaS
 boilerplates
 npm
+CircleCI
 jekyll
 Suda
 nodejs
