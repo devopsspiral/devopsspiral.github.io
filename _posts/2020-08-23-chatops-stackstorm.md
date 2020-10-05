@@ -20,8 +20,8 @@ image:
   header: "chatops_stackstorm.jpg"
   title: "chatops_stackstorm.jpg"
 video:
-    name: "Introduction to ChatOps. Errbot + Slack integration."
-    description: "In this video I'm talking about basics of ChatOps. In practical part I'm showing how to integrate Errbot with Slack."
+    name: "ChatOps level up with StackStorm."
+    description: "In this video I'm showing how to build complete flow with slack, errbot and stackstorm. As an example I'm showing building jenkins jobs from slack."
     duration: "T00H23M48S"
     uploadDate: "2020-08-23"
     embedURL: "https://www.youtube.com/embed/z7r3b5N0SAw"
