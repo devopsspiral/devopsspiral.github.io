@@ -5,6 +5,8 @@
   url: "/blog/"
   side: left
   dropdown:
+  - title: "Posts"
+    url: "/blog/"    
   - title: "Talks"
     url: "/blog/talks/"
   - title: "Blog Archive"
@@ -21,10 +23,12 @@
   url: "/search/"
   side: right
 
-- title: "Contact"
-  url: "/contact/"
+- title: "Subscribe"
+  url: "/subscribe/"
   side: right
   dropdown:
+  - title: "Email"
+    url: "/subscribe/"
   - title: "Twitter"
     url: https://twitter.com/devopsspiral
   - title: "Github"

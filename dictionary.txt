@@ -1,4 +1,5 @@
-personal_ws-1.1 en 157 
+personal_ws-1.1 en 164 
+cfg
 runtime
 nginx
 kubeconfig
@@ -7,11 +8,13 @@ Akihiro
 api
 gradle
 arg
-yml
 PRs
+yml
 RKE
 Traefik
+PYTHONPATH
 golang
+IPs
 Dockerizing
 BPF
 moby
@@ -79,6 +82,8 @@ rebase
 sbin
 rf
 kprobe
+zshrc
+ansible
 ps
 py
 eBPF
@@ -121,8 +126,10 @@ txt
 bpftrace
 endhighlight
 Pixabay
+PID
 apiVersion
 jinja
+BCC
 gitops
 gevent
 sudo
