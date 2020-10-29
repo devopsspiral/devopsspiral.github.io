@@ -33,7 +33,7 @@ I heard "eBPF" so many times in recent days that I've decided to give it a try. 
 ## So what is really eBPF?
 There are many good sources to explain it along with the history of BPF (some of them you will find in this article), so I will try to make it simple. 
 
-eBPF (extended Berkeley Packet Filter) is a functionality of linux kernel that allows lightweight execution of user code as a response to kernel events. The events could be hardware/software events, tracing events both static (compiled into code) and dynamic (attached in runtime), etc. The code itself is limited in a sense that it is guaranteed to finish (no loops) and is verified before loading into kernel. The name itself is a little bit misleading because it is now (extended) far beyond packet filtering only.
+eBPF is a functionality of linux kernel that allows lightweight execution of user code as a response to kernel events. The events could be hardware/software events, tracing events both static (compiled into code) and dynamic (attached in runtime), etc. The code itself is limited in a sense that it is guaranteed to finish (no loops) and is verified before loading into kernel.
 
 Some facts and how others describes it:
 
