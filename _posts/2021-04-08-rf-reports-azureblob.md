@@ -121,6 +121,8 @@ Example test execution with publishing reports in Azure Blob Storage would look 
 ./src/scripts/rf-service --AzureBlobPublisher-path some/path/ --AzureBlobPublisher-prefix smoke --AzureBlobPublisher-connection-string 'DefaultEndpointsProtocol=...' --LocalFetcher-src test/resources/testcases/
 {% endhighlight %}
 
+And the report would be published under [https://v2generalpurpose.z20.web.core.windows.net/some/path/smoke15-03-21T175232-662444.html](localhost)
+
 <small markdown="1">[Back to table of contents](#toc)</small>
 
 ### Sending reports to Azure using Python
