@@ -21,7 +21,7 @@ image:
   header: "testing_with_octopus.jpg"
   title: "testing_with_octopus.jpg"
 ---
-While looking for some tooling for testing Kubernetes deployments I've bumped into [octopus](https://github.com/kyma-incubator/octopus) made as a part of Kyma project. It allows running tests in similar manner as helm test but treating test definitions and executions as kubernetes resources. I thought it is perfect tool for running tests that are encapsulated as containers, i.e. rf-service that I'm working on. In this article I'm describing how I made [KubeLibrary](https://github.com/devopsspiral/KubeLibrary), [rf-service](https://github.com/devopsspiral/rf-service) and octopus work together. 
+While looking for some tooling for testing Kubernetes deployments I've bumped into [octopus](https://github.com/kyma-incubator/octopus) made as a part of Kyma project. It allows running tests in similar manner as helm test but treating test definitions and executions as kubernetes resources. I thought it is perfect tool for running tests that are encapsulated as containers, i.e. rf-service that I'm working on. In this article I'm describing how I made [KubeLibrary](https://github.com/devopsspiral/KubeLibrary), [rf-service](https://github.com/devopsspiral/rf-service/tree/v0.3.1) and octopus work together. 
 
 <div class="panel radius" markdown="1">
 **Table of Contents**

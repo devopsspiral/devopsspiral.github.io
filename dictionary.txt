@@ -1,4 +1,4 @@
-personal_ws-1.1 en 164 
+personal_ws-1.1 en 168 
 cfg
 runtime
 nginx
@@ -42,6 +42,7 @@ loadBalancer
 CRD
 Kyma
 ip
+programmatically
 md's
 yaml
 resourceVersion
@@ -91,6 +92,7 @@ templated
 env
 DevOps
 CronJob
+startpage
 repos
 UI
 gid
@@ -111,6 +113,7 @@ executables
 retag
 frontends
 PyPI
+url
 serviceName
 grafana
 hostname
@@ -129,6 +132,7 @@ Pixabay
 PID
 apiVersion
 jinja
+html
 BCC
 gitops
 gevent

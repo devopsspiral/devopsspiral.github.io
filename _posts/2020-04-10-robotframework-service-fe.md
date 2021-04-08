@@ -341,16 +341,16 @@ and ingress. Expose over ingress became mandatory to allows easy handling on fro
         paths:
           - path: "/"
             backend:
-              serviceName: {{ $fullName }}-rf-service
+              serviceName: {{ $fullName }}
               servicePort: {{ $svcPort }}
           - path: "/caddy/"
             backend:
-              serviceName: {{ $fullName }}-rf-service
+              serviceName: {{ $fullName }}
               servicePort: 8090
         {{- if not $.Values.config }}
           - path: "/api/"
             backend:
-              serviceName: {{ $fullName }}-rf-service
+              serviceName: {{ $fullName }}
               servicePort: 5000
         {{- end }}
   {{- end }}
@@ -377,6 +377,29 @@ and ingress. Expose over ingress became mandatory to allows easy handling on fro
 {% endhighlight %}
 
 <small markdown="1">[Back to table of contents](#toc)</small>
+
+## Testing
+
+You can test the whole setup by first installing the chart on your k8s cluster (k3d in my case):
+{% highlight bash %}
+helm install rf-service chart/rf-service
+{% endhighlight %}
+
+and then setting the example config:
+
+{% highlight json %}
+    "fetcher": {
+        "type": "ZipFetcher",
+        "url": "https://github.com/devopsspiral/rf-service/archive/master.zip",
+        "path": "rf-service-master/test/resources/testcases"
+    },
+    "publisher": {
+        "type": "CaddyPublisher",
+        "url": "http://localhost:8090/uploads"
+    }
+{% endhighlight %}
+
+I'm using localhost:8090 only because in this setup all the containers are in same pod and accessible via localhost on different ports. CaddyPublisher address is used by rf-srvice not external client, like browser.
 
 ## Conclusion
 
